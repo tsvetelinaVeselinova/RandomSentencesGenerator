@@ -6,26 +6,30 @@ namespace Random_Sentences_Generator
     {
         static void Main(string[] args)
         {
-            string[] names = { "Peter", "Anne", "Linda", "Marie"};
-            string[] places = { "Sofia", "Veliko Tarnovo", "Ruse", "Varna"};
-            string[] verbs = { "takes", "drinks", "eats", "plays with"};
-            string[] nouns = { "phone", "cup", "watch", "computer"};
-            string[] adverbs = { "calmly", "sadly", "slowly", "warmly"};
-            string[] details = { "at the beach", "near the river", "at work"};
+            string[] firstNames = { "Peter", "Anne", "Linda", "Marie", "Terrie", "Rosy", "Tsvety" };
+            string[] lastNames = { "Smith", "Wilson", "Lee", "Taylor", "Baker", "Evans", "Allen" };
+            string[] places = { "Sofia", "Veliko Tarnovo", "Ruse", "Varna", "Stara Zagora", "Pleven" };
+            string[] verbs = { "takes", "drinks", "eats", "plays with", "runs", "works" };
+            string[] adjective = { "big", "small", "old", "important", "same", "new" };
+            string[] nouns = { "phone", "cup", "watch", "computer", "paper", "camera" };
+            string[] adverbs = { "calmly", "sadly", "slowly", "warmly", "dizzily" };
+            string[] details = { "at the beach", "near the river", "at work", "at home" };
 
-            Console.WriteLine("Hello, this is your first random-generated sentence: "); 
+            Console.WriteLine("Hello, this is your first random-generated sentence: ");
 
             while (true)
             {
-                string randomName = GetRandomWord(names);
+                string randomFirstName = GetRandomWord(firstNames);
+                string randomLastName = GetRandomWord(lastNames);
                 string randomPlace = GetRandomWord(places);
                 string randomVerb = GetRandomWord(verbs);
+                string randomAdjective = GetRandomWord(adjective);
                 string randomNoun = GetRandomWord(nouns);
-                string randomAdverb= GetRandomWord(adverbs);
+                string randomAdverb = GetRandomWord(adverbs);
                 string randomDetail = GetRandomWord(details);
 
-                string who = $"{randomName} from {randomPlace}";
-                string action = $"{randomAdverb} {randomVerb} {randomNoun}";
+                string who = $"{randomFirstName} {randomLastName} from {randomPlace}";
+                string action = $"{randomAdverb} {randomVerb} {randomAdjective} {randomNoun}";
                 string sentence = $"{who} {action} {randomDetail}";
 
                 Console.WriteLine(sentence);
